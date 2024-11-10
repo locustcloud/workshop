@@ -100,4 +100,3 @@ Debug your load generation
 ![h:300](image-7.png)
 
 ![h:300](image-6_small.png)
-
