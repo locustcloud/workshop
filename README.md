@@ -20,7 +20,7 @@ locust 2.32.2 from /Users/.../workshop/.venv/.../locust (Python 3.12.2)
 
 If you have issues, see https://docs.locust.io/en/stable/installation.html
 
-## Creating your first test
+## 2. Creating your first test
 
 Create a file called [locustfile.py](locustfile.py):
 
@@ -36,7 +36,7 @@ class MyUser(HttpUser):
 
 ---
 
-## 2. Running your first test
+## 3. Running your first test
 
 ```bash
 > locust -H https://<test server>
@@ -46,7 +46,7 @@ class MyUser(HttpUser):
 
 Open the web ui and try running it! Just use a single user for now, you'll get your own target server later.
 
-## 3. Use regular programming constructs in your test
+## 4. Use regular programming constructs in your test
 
 ```python
 from locust import HttpUser, task
@@ -59,7 +59,7 @@ class MyUser(HttpUser):
             self.client.get(f"/products/{i}")
 ```
 
-## 4. Use the debugger to run a single user
+## 5. Use the debugger to run a single user
 
 ```python
 from locust import HttpUser, run_single_user, task
@@ -81,7 +81,7 @@ If you're in VSCode, just launch the "Run current file" configuration.
 * Try setting a breakpoint
 * Examine the response object
 
-## 5. Use the catch_response flag to validate responses
+## 6. Use the catch_response flag to validate responses
 
 ```python
 from locust import HttpUser, run_single_user, task
