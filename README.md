@@ -59,6 +59,8 @@ class MyUser(HttpUser):
             self.client.get(f"/products/{i}")
 ```
 
+* It is probably fairly obvious what this does, but go ahead and try it out anyway!
+
 ## 5. Use the debugger to run a single user
 
 ```python
@@ -77,6 +79,8 @@ if __name__ == "__main__":
 ```
 
 If you're in VSCode, just launch the "Run current file" configuration.
+
+Then you can:
 
 * Try setting a breakpoint
 * Examine the response object
@@ -99,4 +103,38 @@ if __name__ == "__main__":
     run_single_user(MyUser)
 ```
 
-* Try running this with a changed username and password.
+* Try running this with a changed username and password and examine the results.
+
+## Now back to the presentation...
+
+<br/><br/><br/><br/>
+
+## References:
+
+[Increase the request rate in tests](https://docs.locust.io/en/stable/increasing-request-rate.html)
+
+The Locust Cloud blog:
+
+1. [Breaking your website for fun and profit](https://locust.cloud/blog/performance-testing-part-1)
+
+2. [Smoke, stress, spike, soak, and recovery: 5 essential load test profiles](https://locust.cloud/blog/5-essential-load-test-profiles)
+
+3. [Closed vs Open Workload Models in Load Testing](https://locust.cloud/blog/closed-vs-open-workload-models)
+
+4. [Garbage In, Garbage Out: Your Load Test Results Are Only as Reliable as Your Test Environment](https://locust.cloud/blog/performance-test-environments)
+
+5. [16 ways to improve your load test scenarios](https://locust.cloud/blog/16-ways-to-improve-your-load-test-scenarios)
+
+## Screenshots:
+
+![alt text](image-2.png)
+Notice how as new users are added, the response times start increasing and throughput starts to flatten, but the system is not completely overwhelmed.
+
+![alt text](image-3.png)
+Closed load: Variations in response times cause variations in throughput
+
+![alt text](image-4.png)
+Open load: Stable throughput despite variations in response times
+
+Add image showing difference in response time for different requests.
+
