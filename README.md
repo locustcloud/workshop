@@ -1,6 +1,6 @@
 # Locust Cloud Workshop (part 1)
 
-## 1. Installation & creating your first test
+## 1. Installation
 
 ```bash
 > pip install locust-cloud
@@ -20,9 +20,9 @@ locust 2.32.2 from /Users/.../workshop/.venv/.../locust (Python 3.12.2)
 
 If you have issues, see https://docs.locust.io/en/stable/installation.html
 
----
+## Creating your first test
 
-Create a file called locustfile.py:
+Create a file called [locustfile.py](locustfile.py):
 
 ```python
 from locust import HttpUser, task
