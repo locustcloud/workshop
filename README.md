@@ -127,13 +127,13 @@ The Locust Cloud blog:
 
 ## Screenshots:
 
-![alt text](image-2.png)
+![alt text](closed_load_rampup.png)
 Notice how as new users are added, the response times start increasing and throughput starts to flatten, but the system is not completely overwhelmed.
 
-![alt text](image-3.png)
+![alt text](closed_load_variations.png)
 Closed load: Variations in response times cause variations in throughput
 
-![alt text](image-4.png)
+![alt text](open_load_stable_throughput.png)
 Open load: Stable throughput despite variations in response times
 
 Add image showing difference in response time for different requests.
