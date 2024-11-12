@@ -31,7 +31,7 @@ class MyUser(HttpUser):
     @task
     def t(self):
         self.client.get("/")
-        self.client.get("/products/42")
+        self.client.get("/product/42")
 ```
 
 ---
@@ -56,7 +56,7 @@ class MyUser(HttpUser):
     def t(self):
         self.client.get("/")
         for i in range(5):
-            self.client.get(f"/products/{i}")
+            self.client.get(f"/product/{i}")
 ```
 
 * It is probably fairly obvious what this does, but go ahead and try it out anyway!
@@ -71,7 +71,7 @@ class MyUser(HttpUser):
     def t(self):
         self.client.get("/")
         for i in range(5):
-            response = self.client.get(f"/products/{i}")
+            response = self.client.get(f"/product/{i}")
         self.client.get("/this_does_not_exist")
 
 if __name__ == "__main__":
