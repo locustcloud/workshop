@@ -34,16 +34,40 @@ How many have used locust?
 FOSS, MIT License
 Downloaded 50M times, 25k stars on GitHub
 -->
-![bg h:90%](image-1.png)
+![bg h:90%](locust_github_page.png)
 
 ---
 <!--
 header: '![](logo_header.png)'
 -->
+## Step 0: What is Locust anyway?
+<!--
+complex flows like loops or conditional behaviour. 
+
+generate test data on the fly or do any processing that would normally happen on your clients
+
+Tests can be version controlled & diffed. Easier to collaborate
+
+Reusing code between test cases is as simple as importing a module.
+-->
+
+* User behaviour defined in plain Python code
+* Supports most Python libraries and protocols (WebSockets, gRPC, Kafka, MQTT, ...)
+* Distributed
+* Good for CI
+
+---
+
 ## Step 1: Locust & locustfile basics
 
 - Clone the workshop repo: https://github.com/locustcloud/locust-workshop
 - Follow the instructions there
+
+---
+
+## What is Locust Cloud?
+
+
 
 ---
 
@@ -70,6 +94,7 @@ header: '![](logo_header.png)'
 Debug your application
 
 - Which requests are slow? What is the difference? (example using Locust Cloud)
+- Is there a periodic behaviour? (could be due to background jobs, DB analysis etc)
 - Resource metrics (CPU, network, connection pool usage etc)
 - Internal response times (tracing, OTEL)
 - ...
@@ -88,6 +113,23 @@ Debug your load generation
 
 ---
 
+## What's great about Locust Cloud
+
+* Distributed load generation out of the box
+* Persistent reports
+* Deeper analysis (built-in OTEL)
+* Automation (using GitHub Actions or plain POST)
+* Support
+* Plans start at as little as $149/mo
+
+---
+
+## Recap
+
+* Locust - what is it good for?
+
+---
+
 ## To infinity and beyond!
 
 - https://medium.com/locust-cloud/16-ways-to-improve-your-load-test-scenarios-a90372db283a
@@ -97,6 +139,4 @@ Debug your load generation
 <!-- excellent rubber duck -->
 ## One more thing...
 
-![h:300](image-7.png)
-
-![h:300](image-6_small.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![h:350](locust_plush_stock.png) ![h:350](locust_plush_on_screen.png)
