@@ -22,7 +22,7 @@ If you have issues, see https://docs.locust.io/en/stable/installation.html
 
 ## 2. Creating your first test
 
-Create a file called [locustfile.py](locustfile.py):
+Open [locustfile.py](locustfile.py):
 
 ```python
 from locust import HttpUser, task
@@ -103,7 +103,7 @@ if __name__ == "__main__":
     run_single_user(MyUser)
 ```
 
-* Try running this with a changed username and password and examine the results.
+* Try running this with a changed password and examine the results.
 
 ## Now back to the presentation...
 
