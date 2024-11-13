@@ -18,9 +18,9 @@ header: ''
 ## Welcome!
 
 <!-- 
-I hope you're all having a good conference and that you enjoyed lunch.
+I hope you're all having a good conference!
 
-Me: Maintainer of Locust & founder of Locust Technologies
+Me: Maintainer of Locust & founder of Locust Technologies.
 My colleagues will be in the room 
 -->
 
@@ -51,17 +51,17 @@ Tests can be version controlled & diffed. Easier to collaborate
 Reusing code between test cases is as simple as importing a module.
 -->
 
-* User behaviour defined in plain Python code
+- User behaviour defined in plain Python code
 * Supports most Python libraries and protocols (WebSockets, gRPC, Kafka, MQTT, ...)
 * Distributed
 * CLI + WebUI
 
 ---
 
-## Locust basics
+## Write and and run your first load tests using Locust
 
 - Clone the workshop repo: https://github.com/locustcloud/locust-workshop
-- Follow the instructions in the readme
+* Follow the instructions in the readme
 &nbsp;
 &nbsp;
 &nbsp;
