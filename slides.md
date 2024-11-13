@@ -40,7 +40,7 @@ Downloaded 50M times, 25k stars on GitHub
 <!--
 header: '![](logo_header.png)'
 -->
-## Step 0: What is Locust anyway?
+## What is Locust anyway?
 <!--
 complex flows like loops or conditional behaviour. 
 
@@ -54,86 +54,101 @@ Reusing code between test cases is as simple as importing a module.
 * User behaviour defined in plain Python code
 * Supports most Python libraries and protocols (WebSockets, gRPC, Kafka, MQTT, ...)
 * Distributed
-* Good for CI
+* CLI + WebUI
 
 ---
 
-## Step 1: Locust & locustfile basics
+## Locust basics
 
 - Clone the workshop repo: https://github.com/locustcloud/locust-workshop
-- Follow the instructions there
+- Follow the instructions in the readme
+&nbsp;
+&nbsp;
+&nbsp;
 
 ---
 
-## What is Locust Cloud?
+## Locust Cloud
 
-
+- Run Locust on our servers
+  - No need to set up and coordinate load generators
+  - Persistent reports you can go back to and compare
+  - CI runs using Github Actions or web hook
+  - Easier/deeper analysis with built-in OTEL support
+  - Same syntax as "local" Locust-runs
 
 ---
 
-## Step 2: Register for Locust Cloud and run your tests in the cloud
+## Locust Cloud
 
-- Register for Locust Cloud: https://locust.viewer.locust.cloud/signup
+- Start as low as $149/mo, scales as high as 5M concurrent users
+- Commercial support
+&nbsp;
+&nbsp;
+&nbsp;
+
+---
+
+## Run your first test in the cloud
+
+- Register for Locust Cloud: https://locust.cloud/signup
 - Use access code: !LARRY@PYCON!
 - Confirm your email and follow the instructions to set username and password
 - Run it:
 
 ```bash
-> locust-cloud --users 50 -H http://test-target-mock
+> locust-cloud --users 50 --mock-server
 [LOCUST-CLOUD] INFO: Authenticating (eu-north-1, v1.9.1)
 ...
 [2024-11-10 15:47:12,111] master-.../INFO/locust.main: Starting web interface at https://locust.webui.locust.cloud/<your id>
 ```
 
 - Follow the link to the web interface and launch a test!
+- Read README2.md in the repo for more instructions
 
 ---
 
-## Step 3: Understanding test results
+## Understanding test results
 
 Debug your application
 
-- Which requests are slow? What is the difference? (example using Locust Cloud)
-- Is there a periodic behaviour? (could be due to background jobs, DB analysis etc)
-- Resource metrics (CPU, network, connection pool usage etc)
-- Internal response times (tracing, OTEL)
-- ...
+* Which requests are slow? What is the difference? (example using Locust Cloud)
+* Is there a periodic behaviour? (could be due to background jobs, DB analysis etc)
+* Resource metrics (CPU, network, connection pool usage etc)
+* Internal response times (tracing, OTEL)
+* ...
 
 ---
 
-## Step 3: Understanding test results
+## Understanding test results
 
 Debug your load generation
 
-- Make sure you have launched enough Users
-- If you use IP-based load balancing you might not hit all instances (use X-Forwarded-For or additional loadgen IP:s)
-- Check your load test code for loops/heavy things
-- Check your logs for CPU usage warnings (maybe you need to run distributed or need more servers)
-- Is it slow from another location/browser? (if not, then it could be throttling/DDoS protection)
+* Make sure you have launched enough Users
+* If you use IP-based load balancing you might not hit all instances (use X-Forwarded-For or additional loadgen IP:s)
+* Check your load test code for loops/heavy things
+* Check your logs for CPU usage warnings (maybe you need to run distributed or need more servers)
+* Is it slow from another location/browser? (if not, then it could be throttling/DDoS protection)
 
 ---
-
-## What's great about Locust Cloud
+<!--
+* User behaviour defined in plain Python code
+* Supports most Python libraries and protocols (WebSockets, gRPC, Kafka, MQTT, ...)
 
 * Distributed load generation out of the box
 * Persistent reports
 * Deeper analysis (built-in OTEL)
 * Automation (using GitHub Actions or plain POST)
 * Support
-* Plans start at as little as $149/mo
-
----
-
+* You can get started cheap and grow as you need it. Free tier is coming
+-->
 ## Recap
 
-* Locust - what is it good for?
-
----
-
-## To infinity and beyond!
-
-- https://medium.com/locust-cloud/16-ways-to-improve-your-load-test-scenarios-a90372db283a
-- Q&A
+* Locust
+* Locust Cloud
+* Questions
+* https://medium.com/locust-cloud
+* One more thing...
 
 ---
 <!-- excellent rubber duck -->
