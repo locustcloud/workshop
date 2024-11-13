@@ -39,7 +39,7 @@ class MyUser(HttpUser):
 ## 3. Running your first test
 
 ```bash
-> locust -H https://<test server>
+> locust --host https://mock-test-target.eu-north-1.locust.cloud
 [2024-11-10 15:59:26,604] lars-mbp/INFO/locust.main: Starting Locust 2.32.2
 [2024-11-10 15:59:26,608] lars-mbp/INFO/locust.main: Starting web interface at http://0.0.0.0:8089
 ```
