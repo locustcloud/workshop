@@ -49,6 +49,7 @@ Open the web ui and try running it! Just use a single user for now, you'll get y
 ## 4. Use regular programming constructs in your test
 
 ```python
+import time
 from locust import HttpUser, task
 
 class MyUser(HttpUser):
@@ -56,6 +57,7 @@ class MyUser(HttpUser):
     def t(self):
         self.client.get("/")
         for i in range(5):
+            time.sleep(1)
             self.client.get(f"/product/{i}")
 ```
 
