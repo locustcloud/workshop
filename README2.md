@@ -5,5 +5,5 @@ locust-cloud --users 100 --mock-server
 ```
 
 ```bash
-locust-cloud -f complex_locusfile.py --users 200 --mock-server
+locust-cloud -f locustfile_advanced.py --users 100 --rate 5 --mock-server
 ```
