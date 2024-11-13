@@ -55,34 +55,44 @@ Reusing code between test cases is as simple as importing a module.
 * Supports most Python libraries and protocols (WebSockets, gRPC, Kafka, MQTT, ...)
 * Distributed
 * CLI + WebUI
+* No client side JavaScript etc
 
 ---
 
 ## Write and and run your first load tests using Locust
 
 - Clone the workshop repo: https://github.com/locustcloud/locust-workshop
-* Follow the instructions in the readme
+* Demo! (and then follow the instructions in the readme)
 &nbsp;
 &nbsp;
 &nbsp;
 
 ---
 
+## How did it go?
+
+- Were you able to test stuff
+- Comments, feedback
+&nbsp;
+&nbsp;
+&nbsp;
+---
+
 ## Locust Cloud
 
 - Run Locust on our servers
-  - No need to set up and coordinate load generators
-  - Persistent reports you can go back to and compare
-  - CI runs using Github Actions or web hook
-  - Easier/deeper analysis with built-in OTEL support
-  - Same syntax as "local" Locust-runs
+  * No need to set up and coordinate load generators
+  * Persistent reports you can go back to and compare
+  * CI runs using Github Actions or web hook
+  * Easier/deeper analysis with built-in OTEL support
+  * Same syntax as "local" Locust-runs
 
 ---
 
 ## Locust Cloud
 
 - Start as low as $149/mo, scales as high as 5M concurrent users
-- Commercial support
+* Commercial support
 &nbsp;
 &nbsp;
 &nbsp;
@@ -91,20 +101,33 @@ Reusing code between test cases is as simple as importing a module.
 
 ## Run your first test in the cloud
 
-- Register for Locust Cloud: https://locust.cloud/signup
+- Register: https://locust.cloud/signup
 - Use access code: !LARRY@PYCON!
 - Confirm your email and follow the instructions to set username and password
-- Run it:
+- Run it, together with your own mock server instance for testing:
 
-```bash
-> locust-cloud --users 50 --mock-server
+```
+> locust-cloud --users 100 --mock-server
 [LOCUST-CLOUD] INFO: Authenticating (eu-north-1, v1.9.1)
 ...
 [2024-11-10 15:47:12,111] master-.../INFO/locust.main: Starting web interface at https://locust.webui.locust.cloud/<your id>
 ```
 
-- Follow the link to the web interface and launch a test!
-- Read README2.md in the repo for more instructions
+---
+
+## More tests in the cloud
+
+Run a more advanced test (locustfile_advanced.py) against the mock server:
+
+```
+locust-cloud -f locustfile_advanced.py --users 100 --rate 5 --mock-server
+```
+
+* Analyze the results
+  - Peak throughput that the mock can handle?
+  - Which requests are slow?
+  - Are there any periodic variations?
+  - ...
 
 ---
 
@@ -112,11 +135,12 @@ Reusing code between test cases is as simple as importing a module.
 
 Debug your application
 
-* Which requests are slow? What is the difference? (example using Locust Cloud)
+* Which requests are slow? What is the difference between them?
 * Is there a periodic behaviour? (could be due to background jobs, DB analysis etc)
 * Resource metrics (CPU, network, connection pool usage etc)
 * Internal response times (tracing, OTEL)
 * ...
+* https://medium.com/locust-cloud/
 
 ---
 
@@ -129,6 +153,15 @@ Debug your load generation
 * Check your load test code for loops/heavy things
 * Check your logs for CPU usage warnings (maybe you need to run distributed or need more servers)
 * Is it slow from another location/browser? (if not, then it could be throttling/DDoS protection)
+
+---
+
+## Advanced scenarios
+
+* on_start
+* Early exit
+* Weights
+* https://docs.locust.io / examples here https://github.com/locustio/locust
 
 ---
 <!--
@@ -146,8 +179,8 @@ Debug your load generation
 
 * Locust
 * Locust Cloud
-* Questions
 * https://medium.com/locust-cloud
+* Questions?
 * One more thing...
 
 ---

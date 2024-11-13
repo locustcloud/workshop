@@ -38,6 +38,8 @@ class MyUser(HttpUser):
 
 ## 3. Running your first test
 
+Now, run your first test against a mock web shop hosted by us:
+
 ```bash
 > locust --host https://mock-test-target.eu-north-1.locust.cloud
 [2024-11-10 15:59:26,604] lars-mbp/INFO/locust.main: Starting Locust 2.32.2
@@ -110,6 +112,26 @@ if __name__ == "__main__":
 ## Now back to the presentation...
 
 <br/><br/><br/><br/>
+
+# Locust Cloud (part 2)
+
+Run a test against your own mock server:
+
+```bash
+locust-cloud --users 100 --mock-server
+```
+
+Run a more [advanced test](locustfile_advanced.py) against the mock server:
+
+```bash
+locust-cloud -f locustfile_advanced.py --users 100 --rate 5 --mock-server
+```
+
+* Analyze the results
+  * Peak throughput that the mock can handle?
+  * Which requests are slow?
+  * Are there any periodic variations?
+  * ...
 
 ## References:
 
