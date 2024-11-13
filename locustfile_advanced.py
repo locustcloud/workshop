@@ -1,5 +1,6 @@
 import itertools
 import random
+import time
 
 from locust import FastHttpUser, constant, run_single_user, task
 
@@ -28,6 +29,7 @@ class MyUser(FastHttpUser):
 
         # view and add two random products to cart
         for product_id in random.sample(product_ids, 2):
+            time.sleep(1)
             self.client.get(f"/product/{product_id}")
             # use .rest method for built in response checking and better type hints
             with self.rest("POST", "/cart/add", json={"productId": product_id}) as resp:
