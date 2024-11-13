@@ -15,8 +15,9 @@ header: ''
 
 ---
 
-## Welcome!
+# Welcome!
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![h:400](locust_plush_stock.png)
 <!-- 
 I hope you're all having a good conference!
 
@@ -96,38 +97,41 @@ Reusing code between test cases is as simple as importing a module.
 &nbsp;
 &nbsp;
 &nbsp;
+&nbsp;
+&nbsp;
 
 ---
 
-## Run your first test in the cloud
+## Demo time!
 
-- Register: https://locust.cloud/signup
-- Use access code: !LARRY@PYCON!
-- Confirm your email and follow the instructions to set username and password
-- Run it, together with your own mock server instance for testing:
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+---
+
+- https://locust.cloud/signup (access code: !LARRY@PYCON!)
+- Follow the instructions to set username and password
 
 ```
-> locust-cloud --users 100 --mock-server
+> locust-cloud -f locustfile.py --users 100 --mock-server
 [LOCUST-CLOUD] INFO: Authenticating (eu-north-1, v1.9.1)
 ...
 [2024-11-10 15:47:12,111] master-.../INFO/locust.main: Starting web interface at https://locust.webui.locust.cloud/<your id>
 ```
 
----
-
-## More tests in the cloud
-
-Run a more advanced test (locustfile_advanced.py) against the mock server:
+- Examine locustfile_advanced.py
 
 ```
-locust-cloud -f locustfile_advanced.py --users 100 --rate 5 --mock-server
+> locust-cloud -f locustfile_advanced.py --users 100 --rate 5 --mock-server                                                 
 ```
 
-* Analyze the results
+- Analyze the results
   - Peak throughput that the mock can handle?
   - Which requests are slow?
   - Are there any periodic variations?
-  - ...
 
 ---
 
