@@ -5,4 +5,4 @@ class MyUser(HttpUser):
     @task
     def t(self):
         self.client.get("/")
-        self.client.get("/products/42")
+        self.client.get("/product/42")
