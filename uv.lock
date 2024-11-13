@@ -461,7 +461,7 @@ wheels = [
 
 [[package]]
 name = "locust-cloud"
-version = "1.9.0"
+version = "1.10.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "boto3" },
@@ -470,7 +470,7 @@ dependencies = [
     { name = "pyjwt" },
 ]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/bc/50/c7cdf48dd2ffc8085287a962546e55f3c7122d85d15de5f9c347f12157bb/locust_cloud-1.9.0-py3-none-any.whl", hash = "sha256:1e827b867456a4fb68db021c7cd32065d04455383eb559dc4a577407d5baa9d8", size = 1096374 },
+    { url = "https://files.pythonhosted.org/packages/9b/42/075036db584720994bbdc2ffbcdd2e7da4f56490983565a9625daac73581/locust_cloud-1.10.0-py3-none-any.whl", hash = "sha256:eef30f7b5b743516c8576fd9847a977e239af5a5c4894ffc63b76f1496d74af5", size = 1096568 },
 ]
 
 [[package]]
@@ -898,7 +898,7 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "locust-cloud", specifier = ">=1.9.0" }]
+requires-dist = [{ name = "locust-cloud", specifier = "==1.10.0" }]
 
 [package.metadata.requires-dev]
 dev = [
