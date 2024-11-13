@@ -22,9 +22,9 @@ class MyUser(FastHttpUser):
 
         # log in using rest() wrapper method
         with self.rest(
-            "POST", "/authenticate", json={"username": username, "password": password}, catch_response=True
+            "POST", "/authenticate", json={"username": username, "password": password}
         ) as resp:
-            if err := resp.js["error"]:
+            if err := resp.js.get("error"):
                 resp.failure(err)
 
         # view and add two random products to cart
@@ -40,6 +40,8 @@ class MyUser(FastHttpUser):
         with self.rest("POST", "/checkout/confirm") as resp:
             if not resp.js.get("orderId"):
                 resp.failure("orderId missing")
+
+        self.client.get("/intermittent-spikes")
 
 
 class JustBrowsingUser(FastHttpUser):  # this user is just looking at stuff
