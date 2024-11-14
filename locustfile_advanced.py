@@ -21,16 +21,14 @@ class MyUser(FastHttpUser):
         username, password = next(users)
 
         # log in using rest() wrapper method
-        with self.rest(
-            "POST", "/authenticate", json={"username": username, "password": password}
-        ) as resp:
+        with self.rest("POST", "/authenticate", json={"username": username, "password": password}) as resp:
             if err := resp.js.get("error"):
                 resp.failure(err)
 
         # view and add two random products to cart
         for product_id in random.sample(product_ids, 2):
             time.sleep(1)
-            self.client.get(f"/product/{product_id}")
+            self.client.get(f"/product/{product_id}", name="/product/{product_id}")
             # use .rest method for built in response checking and better type hints
             with self.rest("POST", "/cart/add", json={"productId": product_id}) as resp:
                 if error := resp.js.get("error"):
@@ -52,7 +50,7 @@ class JustBrowsingUser(FastHttpUser):  # this user is just looking at stuff
         self.client.get("/")
 
         for product_id in random.sample(product_ids, 2):
-            self.client.get(f"/product/{product_id}")
+            self.client.get(f"/product/{product_id}", name="/product/{product_id}")
 
 
 if __name__ == "__main__":

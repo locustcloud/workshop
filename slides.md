@@ -78,6 +78,13 @@ Reusing code between test cases is as simple as importing a module.
 &nbsp;
 &nbsp;
 ---
+<!--
+Maybe everyone doesnt love spending all day settin up load testing infrastructure or reporting solutions?
+-->
+
+![bg h:550](image.png)
+
+---
 
 ## Locust Cloud
 
@@ -86,7 +93,7 @@ Reusing code between test cases is as simple as importing a module.
   * Persistent reports you can go back to and compare
   * CI runs using Github Actions or web hook
   * Easier/deeper analysis with built-in OTEL support
-  * Same syntax as "local" Locust-runs
+  * Same syntax as regular Locust-runs
 
 ---
 
@@ -188,7 +195,11 @@ Debug your load generation
 * One more thing...
 
 ---
-<!-- excellent rubber duck -->
+<!-- excellent rubber duck
+free 1m trial
+ -->
 ## One more thing...
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![h:350](locust_plush_stock.png) ![h:350](locust_plush_on_screen.png)
+
+<p style="text-align: center;">lars@locust.cloud</p>
