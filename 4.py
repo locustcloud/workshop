@@ -4,6 +4,8 @@ from locust import HttpUser, task
 
 
 class MyUser(HttpUser):
+    host = "https://mock-test-target.eu-north-1.locust.cloud"
+
     @task
     def t(self):
         self.client.get("/")
