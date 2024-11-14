@@ -40,6 +40,7 @@ class MyUser(FastHttpUser):
                 resp.failure("orderId missing")
 
         self.client.get("/intermittent-spikes")
+        self.client.get("/this_does_not_exist")
 
 
 class JustBrowsingUser(FastHttpUser):  # this user is just looking at stuff

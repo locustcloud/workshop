@@ -108,7 +108,11 @@ Maybe everyone doesnt love spending all day settin up load testing infrastructur
 &nbsp;
 
 ---
-
+<!--
+Show console
+Show time limit
+Show graphs, stats, testruns
+-->
 ## Demo time!
 
 &nbsp;
