@@ -15,7 +15,7 @@ header: ''
 
 ---
 
-# Welcome!
+# Welcome! rewrite to start with a question, or "once upon a time"-type intro, "last year i did X that made me fundamentally change my opinion on Y"
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![h:400](locust_plush_stock.png)
 <!-- 
