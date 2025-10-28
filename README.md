@@ -1,3 +1,7 @@
+# Welcome to the Locust Tutorial
+
+You can clone this repo or just read it as is.
+
 ## 1. Set up Locust
 
 Option 1: Run locally
@@ -96,14 +100,18 @@ if __name__ == "__main__":
 
 * Try running this with a changed password and examine the results.
 
-# Locust Cloud
+# Locust Cloud using regular Locust Commands
+
+Register for [Locust Cloud](https://auth.locust.cloud/signup) if you haven't already. When you are done, log in to the service:
 
 ```bash
 locust --cloud --login
 ```
 
+And then run your first test.
+
 ```bash
-locust --cloud --users 100
+locust --cloud --host https://mock-test-target.eu-north-1.locust.cloud --users 100
 ```
 
 Run a more [advanced test](locustfile_advanced.py) against the mock server:
