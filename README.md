@@ -117,7 +117,7 @@ locust --cloud --host https://mock-test-target.eu-north-1.locust.cloud --users 1
 Run a more [advanced test](locustfile_advanced.py) against the mock server:
 
 ```bash
-locust --cloud -f locustfile_advanced.py --users 100 --rate 5
+locust --cloud --host https://mock-test-target.eu-north-1.locust.cloud -f locustfile_advanced.py --users 100 --rate 5
 ```
 
 * Analyze the results
