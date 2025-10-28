@@ -118,7 +118,7 @@ if __name__ == "__main__":
 
 ## 7. Use Locust Cloud from the terminal
 
-Locust Cloud tests can are executed in the same way as local load tests.
+Locust Cloud tests can be executed in the same way as local load tests, by just adding the `--cloud` flag.
 
 Register for [Locust Cloud](https://auth.locust.cloud/signup) if you haven't already. When you are done, log in to the service:
 
