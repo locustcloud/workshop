@@ -100,7 +100,9 @@ if __name__ == "__main__":
 
 * Try running this with a changed password and examine the results.
 
-# Locust Cloud using regular Locust Commands
+## 7. Use Locust Cloud from the terminal
+
+Locust Cloud tests can are executed in the same way as local load tests.
 
 Register for [Locust Cloud](https://auth.locust.cloud/signup) if you haven't already. When you are done, log in to the service:
 
