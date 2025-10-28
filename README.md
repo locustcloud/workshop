@@ -1,5 +1,11 @@
 # Welcome to the Locust Tutorial
 
+If you need help:
+
+[Locust documentation](https://docs.locust.io)
+
+[Slack channel](https://slack.locust.io)
+
 ## 1. Set up Locust
 
 Option 1: Run on [Locust Cloud](https://auth.locust.cloud/signup) (no setup needed)
