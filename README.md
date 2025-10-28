@@ -1,7 +1,5 @@
 # Welcome to the Locust Tutorial
 
-You can clone this repo or just read it as is.
-
 ## 1. Set up Locust
 
 Option 1: Run locally
