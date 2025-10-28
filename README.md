@@ -147,6 +147,8 @@ locust --cloud --host https://mock-test-target.eu-north-1.locust.cloud -f locust
 
 Check out the [Locust documentation](https://docs.locust.io)
 
+Maybe you want to [run Locust in your own Kubernetes cluster](https://docs.locust.io/en/stable/locust-cloud/kubernetes-operator.html)?
+
 Or the [Locust Cloud blog](https://locust.cloud/blog/):
 
 1. [Breaking your website for fun and profit](https://locust.cloud/blog/performance-testing-part-1)
