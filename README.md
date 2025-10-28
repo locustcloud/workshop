@@ -1,28 +1,19 @@
-# Locust Cloud Workshop (part 1)
+## 1. Set up Locust
 
-## 1. Installation
+Option 1: Run locally
 
 ```bash
-> pip install locust-cloud
+> pip install locust
 ...
 > locust -V
-locust 2.32.2 from /Users/.../locust (Python 3.12.2)
+locust 2.42.1 from /Users/.../locust (Python 3.12.2)
 ```
 
-Alternatively (standing in this repo):
-
-```bash
-> uv sync
-...
-> uv run locust -V
-locust 2.32.2 from /Users/.../workshop/.venv/.../locust (Python 3.12.2)
-```
-
-If you have issues, see https://docs.locust.io/en/stable/installation.html
+Option 2: Run on [Locust Cloud](https://auth.locust.cloud/signup) (no setup needed)
 
 ## 2. Creating your first test
 
-Open [locustfile.py](locustfile.py):
+Open [locustfile.py](locustfile.py) (locally or in the [hosted test editor](https://auth.locust.cloud/editor))
 
 ```python
 from locust import HttpUser, task
@@ -34,19 +25,17 @@ class MyUser(HttpUser):
         self.client.get("/product/42")
 ```
 
----
-
 ## 3. Running your first test
 
 Now, run your first test against a mock web shop hosted by us:
 
 ```bash
 > locust --host https://mock-test-target.eu-north-1.locust.cloud
-[2024-11-10 15:59:26,604] lars-mbp/INFO/locust.main: Starting Locust 2.32.2
+[2024-11-10 15:59:26,604] lars-mbp/INFO/locust.main: Starting Locust 2.42.1
 [2024-11-10 15:59:26,608] lars-mbp/INFO/locust.main: Starting web interface at http://0.0.0.0:8089
 ```
 
-Open the web ui and try running it! Just use a single user for now, you'll get your own target server later.
+Open the web ui and try running it! Just use a single user for now to not spam the service.
 
 ## 4. Use regular programming constructs in your test
 
@@ -86,8 +75,7 @@ If you're in VSCode, just launch the "Run current file" configuration.
 
 Then you can:
 
-* Try setting a breakpoint
-* Examine the response object
+* Try setting a breakpoint & examine the response object in real time
 
 ## 6. Use the catch_response flag to validate responses
 
@@ -95,7 +83,6 @@ Then you can:
 from locust import HttpUser, run_single_user, task
 
 class MyUser(HttpUser):
-    @task
     def t(self):
         with self.client.post(
             "/authenticate", json={"username": "foo", "password": "bar"}, catch_response=True
@@ -109,22 +96,20 @@ if __name__ == "__main__":
 
 * Try running this with a changed password and examine the results.
 
-## Now back to the presentation...
-
-<br/><br/><br/><br/>
-
-# Locust Cloud (part 2)
-
-Run a test against your own mock server:
+# Locust Cloud
 
 ```bash
-locust-cloud --users 100 --mock-server
+locust --cloud --login
+```
+
+```bash
+locust --cloud --users 100
 ```
 
 Run a more [advanced test](locustfile_advanced.py) against the mock server:
 
 ```bash
-locust-cloud -f locustfile_advanced.py --users 100 --rate 5 --mock-server
+locust --cloud -f locustfile_advanced.py --users 100 --rate 5
 ```
 
 * Analyze the results
@@ -161,4 +146,3 @@ Closed load: Variations in response times cause variations in throughput
 Open load: Stable throughput despite variations in response times
 
 Add image showing difference in response time for different requests.
-
