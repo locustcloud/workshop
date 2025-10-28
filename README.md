@@ -90,7 +90,7 @@ if __name__ == "__main__":
     run_single_user(MyUser)
 ```
 
-If you're in VSCode, just launch the "Run current file" configuration.
+If you're in VSCode, just launch the "Run current file" configuration. Also check out the [VSCode Extension](https://github.com/locustcloud/extension).
 
 Then you can:
 
