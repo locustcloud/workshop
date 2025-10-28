@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "locust-cloud==1.10.0",
+    "locust>=2.42.1",
 ]
 
 [tool.ruff]
