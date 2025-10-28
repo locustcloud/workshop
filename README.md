@@ -90,7 +90,7 @@ if __name__ == "__main__":
     run_single_user(MyUser)
 ```
 
-If you're in VSCode, just launch the "Run current file" configuration. Also check out the [Locust VSCode Extension](https://github.com/locustcloud/extension).
+If you're in VSCode, just launch the "Run current file" configuration. Also check out the [Locust VSCode Extension](https://github.com/locustcloud/extension). You'll need to set `"gevent": true` in your launch.json if you didn't clone this repo, otherwise vscode will give an error talking about `It seems that the gevent monkey-patching is being used. ...`
 
 Then you can:
 
@@ -102,6 +102,7 @@ Then you can:
 from locust import HttpUser, run_single_user, task
 
 class MyUser(HttpUser):
+    @task
     def t(self):
         with self.client.post(
             "/authenticate", json={"username": "foo", "password": "bar"}, catch_response=True
@@ -134,7 +135,7 @@ locust --cloud --host https://mock-test-target.eu-north-1.locust.cloud --users 1
 Run a more [advanced test](locustfile_advanced.py) against the mock server:
 
 ```bash
-locust --cloud --host https://mock-test-target.eu-north-1.locust.cloud -f locustfile_advanced.py --users 100 --rate 5
+locust --cloud --host https://mock-test-target.eu-north-1.locust.cloud -f locustfile_advanced.py --users 100 --spawn-rate 5
 ```
 
 * Analyze the results
