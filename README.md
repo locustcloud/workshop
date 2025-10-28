@@ -2,7 +2,9 @@
 
 ## 1. Set up Locust
 
-Option 1: Run locally
+Option 1: Run on [Locust Cloud](https://auth.locust.cloud/signup) (no setup needed)
+
+Option 2: Run locally
 
 ```bash
 > pip install locust
@@ -11,7 +13,16 @@ Option 1: Run locally
 locust 2.42.1 from /Users/.../locust (Python 3.12.2)
 ```
 
-Option 2: Run on [Locust Cloud](https://auth.locust.cloud/signup) (no setup needed)
+Option 3: Clone this repo and use [uv](https://github.com/astral-sh/uv) to run in an isolated environment:
+
+```bash
+> git clone https://github.com/locustcloud/workshop.git
+...
+> cd workshop
+> uv run locust -V
+locust 2.42.1 from /Users/.../.venv/lib/python3.12/site-packages/locust (Python 3.12.7)
+```
+
 
 ## 2. Creating your first test
 
