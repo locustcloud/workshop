@@ -158,16 +158,3 @@ The Locust Cloud blog:
 4. [Garbage In, Garbage Out: Your Load Test Results Are Only as Reliable as Your Test Environment](https://locust.cloud/blog/performance-test-environments)
 
 5. [16 ways to improve your load test scenarios](https://locust.cloud/blog/16-ways-to-improve-your-load-test-scenarios)
-
-## Screenshots:
-
-![alt text](https://cdn.prod.website-files.com/66596d70fa45b7e4c8ec4997/6731d678eab6e1028e060332_closed_load_rampup.png)
-Notice how as new users are added, the response times start increasing and throughput starts to flatten, but the system is not completely overwhelmed.
-
-![alt text](https://cdn.prod.website-files.com/66596d70fa45b7e4c8ec4997/6731d677f7c25db1c8ea12cd_closed_load_variations.png)
-Closed load: Variations in response times cause variations in throughput
-
-![alt text](https://cdn.prod.website-files.com/66596d70fa45b7e4c8ec4997/6731d677110f61ca6749f8a3_open_load_stable_throuhgput.png)
-Open load: Stable throughput despite variations in response times
-
-Add image showing difference in response time for different requests.
