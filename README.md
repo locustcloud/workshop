@@ -143,11 +143,11 @@ locust --cloud --host https://mock-test-target.eu-north-1.locust.cloud -f locust
   * Are there any periodic variations?
   * ...
 
-## References:
+## Where do we go from here?
 
-[Increase the request rate in tests](https://docs.locust.io/en/stable/increasing-request-rate.html)
+Check out the [Locust documentation](https://docs.locust.io)
 
-The Locust Cloud blog:
+Or the [Locust Cloud blog](https://locust.cloud/blog/):
 
 1. [Breaking your website for fun and profit](https://locust.cloud/blog/performance-testing-part-1)
 
